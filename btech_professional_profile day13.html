@@ -1,0 +1,87 @@
+
+<style>
+  .profile-wrap { padding: 1.5rem 0; font-family: var(--font-sans); }
+  .header-row { display: flex; align-items: center; gap: 16px; margin-bottom: 1.5rem; }
+  .avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--color-background-info); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 500; color: var(--color-text-info); flex-shrink: 0; border: 0.5px solid var(--color-border-tertiary); }
+  .name { font-size: 20px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 2px; }
+  .tagline { font-size: 14px; color: var(--color-text-secondary); margin: 0; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 12px; }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; }
+  .card-label { font-size: 12px; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 10px; }
+  .info-row { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-text-primary); margin-bottom: 6px; }
+  .info-row:last-child { margin-bottom: 0; }
+  .info-row i { color: var(--color-text-secondary); font-size: 16px; }
+  .skill-wrap { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+  .pill { font-size: 12px; padding: 4px 10px; border-radius: 99px; font-weight: 400; border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary); color: var(--color-text-secondary); }
+  .pill.blue { background: #E6F1FB; color: #0C447C; border-color: #85B7EB; }
+  .pill.teal { background: #E1F5EE; color: #085041; border-color: #5DCAA5; }
+  .pill.purple { background: #EEEDFE; color: #3C3489; border-color: #AFA9EC; }
+  .achieve-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 14px; color: var(--color-text-primary); line-height: 1.5; }
+  .achieve-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .achieve-item i { color: var(--color-text-info); font-size: 16px; margin-top: 2px; flex-shrink: 0; }
+  .status-badge { display: inline-flex; align-items: center; gap: 5px; background: #E1F5EE; color: #085041; border-radius: 99px; padding: 3px 10px; font-size: 12px; margin-bottom: 1.25rem; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: #0F6E56; }
+  .section-full { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 12px; }
+</style>
+
+<div class="profile-wrap">
+  <div class="header-row">
+    <div class="avatar">BS</div>
+    <div>
+      <p class="name">B.Tech Student</p>
+      <p class="tagline">Software Development · AI Tools · Prompt Engineering</p>
+    </div>
+  </div>
+
+  <div class="status-badge"><div class="dot"></div> Actively building · Open to opportunities</div>
+
+  <div class="grid-2">
+    <div class="card">
+      <p class="card-label">Identity</p>
+      <div class="info-row"><i class="ti ti-school" aria-hidden="true"></i> B.Tech Student</div>
+      <div class="info-row"><i class="ti ti-clock" aria-hidden="true"></i> Fresher · Entry Level</div>
+      <div class="info-row"><i class="ti ti-map-pin" aria-hidden="true"></i> Kanpur, Uttar Pradesh, India</div>
+    </div>
+    <div class="card">
+      <p class="card-label">Domain expertise</p>
+      <div class="info-row"><i class="ti ti-code" aria-hidden="true"></i> Software Development</div>
+      <div class="info-row"><i class="ti ti-robot" aria-hidden="true"></i> AI Tools & Automation</div>
+      <div class="info-row"><i class="ti ti-prompt" aria-hidden="true"></i> Prompt Engineering</div>
+    </div>
+  </div>
+
+  <div class="section-full">
+    <p class="card-label">Technical skills</p>
+    <div class="skill-wrap">
+      <span class="pill blue">Java</span>
+      <span class="pill blue">HTML</span>
+      <span class="pill blue">CSS</span>
+      <span class="pill teal">GitHub</span>
+      <span class="pill teal">Version Control</span>
+      <span class="pill purple">Prompt Engineering</span>
+      <span class="pill purple">AI Tools</span>
+      <span class="pill">Basic Programming</span>
+      <span class="pill">OOP Concepts</span>
+    </div>
+  </div>
+
+  <div class="section-full">
+    <p class="card-label">Achievements & activities</p>
+    <div class="achieve-item">
+      <i class="ti ti-trophy" aria-hidden="true"></i>
+      <span>Participating in the ABTalks 60 Days Claude Challenge — building AI prompting fluency through daily practice</span>
+    </div>
+    <div class="achieve-item">
+      <i class="ti ti-brand-github" aria-hidden="true"></i>
+      <span>Active GitHub portfolio development — demonstrating real projects and version control discipline</span>
+    </div>
+    <div class="achieve-item">
+      <i class="ti ti-bulb" aria-hidden="true"></i>
+      <span>Multiple AI prompting and productivity projects — hands-on experience with LLM workflows</span>
+    </div>
+    <div class="achieve-item">
+      <i class="ti ti-certificate" aria-hidden="true"></i>
+      <span>Internship and career development certifications — building a structured path toward industry readiness</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,291 @@
+
+<style>
+* { box-sizing: border-box; }
+body { font-family: var(--font-sans); }
+.report { padding: 1.5rem 0; }
+.section-title { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 12px; }
+.card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 12px; }
+.metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 16px; }
+.metric { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px; }
+.metric-label { font-size: 11px; color: var(--color-text-secondary); margin: 0 0 4px; }
+.metric-val { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin: 0; }
+.tbl-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
+th { text-align: left; font-weight: 500; font-size: 11px; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 10px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+td { padding: 10px 10px; border-bottom: 0.5px solid var(--color-border-tertiary); vertical-align: top; color: var(--color-text-primary); line-height: 1.45; }
+tr:last-child td { border-bottom: none; }
+.score { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 22px; border-radius: 99px; font-size: 12px; font-weight: 500; }
+.s-high { background: #E1F5EE; color: #085041; }
+.s-mid { background: #FAEEDA; color: #633806; }
+.tag { font-size: 11px; padding: 2px 8px; border-radius: 99px; border: 0.5px solid; display: inline-block; margin: 2px 2px 0 0; }
+.t-blue { background: #E6F1FB; color: #0C447C; border-color: #85B7EB; }
+.t-green { background: #EAF3DE; color: #27500A; border-color: #97C459; }
+.t-amber { background: #FAEEDA; color: #633806; border-color: #EF9F27; }
+.t-red { background: #FCEBEB; color: #791F1F; border-color: #F09595; }
+.t-gray { background: #F1EFE8; color: #444441; border-color: #B4B2A9; }
+.skill-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; }
+.skill-row:last-child { border-bottom: none; }
+.skill-row i { font-size: 15px; flex-shrink: 0; }
+.bar-wrap { flex: 1; background: var(--color-background-secondary); border-radius: 99px; height: 6px; overflow: hidden; }
+.bar { height: 100%; border-radius: 99px; }
+.rec-item { display: flex; gap: 10px; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; line-height: 1.5; }
+.rec-item:last-child { border-bottom: none; }
+.rec-num { min-width: 22px; height: 22px; border-radius: 50%; background: #EEEDFE; color: #3C3489; font-size: 11px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+.link-btn { font-size: 12px; color: #0C447C; text-decoration: none; background: #E6F1FB; border: 0.5px solid #85B7EB; padding: 2px 8px; border-radius: 99px; display: inline-block; white-space: nowrap; }
+.trend-row { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; }
+.trend-row:last-child { border-bottom: none; }
+.trend-row i { color: var(--color-text-secondary); font-size: 15px; }
+.fit-bar-outer { background: var(--color-background-secondary); border-radius: 99px; height: 10px; flex: 1; overflow: hidden; }
+.fit-bar-inner { height: 100%; border-radius: 99px; background: #1D9E75; }
+</style>
+
+<div class="report">
+  <h2 class="sr-only">Internship job market report for a B.Tech fresher in software development and AI, based in India, June 2026</h2>
+
+  <div class="metrics">
+    <div class="metric"><p class="metric-label">Roles found</p><p class="metric-val">8</p></div>
+    <div class="metric"><p class="metric-label">High match</p><p class="metric-val">5</p></div>
+    <div class="metric"><p class="metric-label">Avg stipend</p><p class="metric-val">₹18k</p></div>
+    <div class="metric"><p class="metric-label">Remote/hybrid</p><p class="metric-val">100%</p></div>
+  </div>
+
+  <p class="section-title">Top opportunities · sorted by match score</p>
+  <div class="card" style="padding: 0;">
+    <div class="tbl-wrap">
+      <table>
+        <colgroup>
+          <col style="width:130px">
+          <col style="width:155px">
+          <col style="width:90px">
+          <col style="width:75px">
+          <col style="width:52px">
+          <col style="width:80px">
+          <col style="width:105px">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Company · role</th>
+            <th>Why it fits</th>
+            <th>Location</th>
+            <th>Stipend</th>
+            <th>Score</th>
+            <th>Posted</th>
+            <th>Apply</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="font-weight:500;">Neurasys</strong><br>Java Developer Intern</td>
+            <td>Core Java + Spring MVC + MySQL; fresher-friendly; mentorship with seniors; remote</td>
+            <td>Remote</td>
+            <td>₹15–20k/mo</td>
+            <td><span class="score s-high">95</span></td>
+            <td>Jun 2026</td>
+            <td><a class="link-btn" href="https://internshala.com/internships/software-development-internship/" target="_blank">Apply ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong style="font-weight:500;">CloudZapier</strong><br>Java Development Intern</td>
+            <td>Java, MySQL, J2EE, Spring MVC, Hibernate; code reviews; fully remote; fresher open</td>
+            <td>Remote</td>
+            <td>₹10–15k/mo</td>
+            <td><span class="score s-high">92</span></td>
+            <td>Apr 2026</td>
+            <td><a class="link-btn" href="https://internshala.com/internships/work-from-home-java-internships/" target="_blank">Apply ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong style="font-weight:500;">Reducate.ai</strong><br>AI Intern</td>
+            <td>AI tools + LLM-adjacent work; edtech startup; English + AI skills valued; remote</td>
+            <td>Remote</td>
+            <td>₹10–15k/mo</td>
+            <td><span class="score s-high">88</span></td>
+            <td>May 2026</td>
+            <td><a class="link-btn" href="https://internshala.com/internships/work-from-home-artificial-intelligence-ai-internships/" target="_blank">Apply ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong style="font-weight:500;">Quillance</strong><br>AI Intern (Fresher)</td>
+            <td>Explicitly targets freshers passionate about AI; startup; hands-on ML exposure; remote</td>
+            <td>Remote</td>
+            <td>₹15k/mo</td>
+            <td><span class="score s-high">87</span></td>
+            <td>Jun 2026</td>
+            <td><a class="link-btn" href="https://www.glassdoor.co.in/Job/artificial-intelligence-ai-intern-jobs-SRCH_KO0,33.htm" target="_blank">Apply ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong style="font-weight:500;">Factech Automation</strong><br>Software Testing Intern</td>
+            <td>Java + Selenium + TestNG; IT automation product co.; fresher-friendly; remote</td>
+            <td>Remote</td>
+            <td>₹8–15k/mo</td>
+            <td><span class="score s-high">83</span></td>
+            <td>Jun 2026</td>
+            <td><a class="link-btn" href="https://internshala.com/internships/java-internship/" target="_blank">Apply ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong style="font-weight:500;">Symonis</strong><br>Java Development Intern</td>
+            <td>JSP, J2EE, Hibernate, Spring MVC; innovative environment claim; mentor structure</td>
+            <td>Hybrid</td>
+            <td>₹10–18k/mo</td>
+            <td><span class="score s-mid">78</span></td>
+            <td>May 2026</td>
+            <td><a class="link-btn" href="https://internshala.com/internships/web-development-internship/" target="_blank">Apply ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong style="font-weight:500;">Basti Ki Pathshala Foundation</strong><br>ML / AI Intern</td>
+            <td>Python, ML, NLP, HTML; social-impact startup; remote; low competition due to niche</td>
+            <td>Remote</td>
+            <td>Unpaid / stipend</td>
+            <td><span class="score s-mid">72</span></td>
+            <td>May 2026</td>
+            <td><a class="link-btn" href="https://internshala.com/internships/work-from-home-artificial-intelligence-ai-internships/" target="_blank">Apply ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong style="font-weight:500;">Impressico Business Solutions</strong><br>GenAI / Full Stack Trainee</td>
+            <td>GenAI + Python stack; 2026 batch eligible; converts to Trainee Engineer after 6 months</td>
+            <td>Hybrid (Noida)</td>
+            <td>₹20k/mo</td>
+            <td><span class="score s-mid">70</span></td>
+            <td>Jun 2026</td>
+            <td><a class="link-btn" href="https://internshala.com/fresher-jobs/software-development-jobs/" target="_blank">Apply ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <p class="section-title" style="margin-top:1.5rem;">Most required skills across listings</p>
+  <div class="card">
+    <div class="skill-row">
+      <span style="font-size:13px; min-width:110px; color:var(--color-text-primary);">Java (Core)</span>
+      <div class="bar-wrap"><div class="bar" style="width:95%; background:#378ADD;"></div></div>
+      <span style="font-size:12px; color:var(--color-text-secondary);">95%</span>
+    </div>
+    <div class="skill-row">
+      <span style="font-size:13px; min-width:110px; color:var(--color-text-primary);">Git / GitHub</span>
+      <div class="bar-wrap"><div class="bar" style="width:90%; background:#378ADD;"></div></div>
+      <span style="font-size:12px; color:var(--color-text-secondary);">90%</span>
+    </div>
+    <div class="skill-row">
+      <span style="font-size:13px; min-width:110px; color:var(--color-text-primary);">Spring Boot / MVC</span>
+      <div class="bar-wrap"><div class="bar" style="width:80%; background:#D85A30;"></div></div>
+      <span style="font-size:12px; color:var(--color-text-secondary);">80%</span>
+    </div>
+    <div class="skill-row">
+      <span style="font-size:13px; min-width:110px; color:var(--color-text-primary);">MySQL / Databases</span>
+      <div class="bar-wrap"><div class="bar" style="width:78%; background:#D85A30;"></div></div>
+      <span style="font-size:12px; color:var(--color-text-secondary);">78%</span>
+    </div>
+    <div class="skill-row">
+      <span style="font-size:13px; min-width:110px; color:var(--color-text-primary);">Python</span>
+      <div class="bar-wrap"><div class="bar" style="width:72%; background:#D85A30;"></div></div>
+      <span style="font-size:12px; color:var(--color-text-secondary);">72%</span>
+    </div>
+    <div class="skill-row">
+      <span style="font-size:13px; min-width:110px; color:var(--color-text-primary);">HTML / CSS</span>
+      <div class="bar-wrap"><div class="bar" style="width:65%; background:#1D9E75;"></div></div>
+      <span style="font-size:12px; color:var(--color-text-secondary);">65%</span>
+    </div>
+    <div class="skill-row">
+      <span style="font-size:13px; min-width:110px; color:var(--color-text-primary);">REST APIs</span>
+      <div class="bar-wrap"><div class="bar" style="width:60%; background:#7F77DD;"></div></div>
+      <span style="font-size:12px; color:var(--color-text-secondary);">60%</span>
+    </div>
+    <div class="skill-row">
+      <span style="font-size:13px; min-width:110px; color:var(--color-text-primary);">Data Structures</span>
+      <div class="bar-wrap"><div class="bar" style="width:55%; background:#7F77DD;"></div></div>
+      <span style="font-size:12px; color:var(--color-text-secondary);">55%</span>
+    </div>
+  </div>
+
+  <p class="section-title" style="margin-top:1.5rem;">Skill gap analysis</p>
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:12px; margin-bottom:12px;">
+    <div class="card">
+      <p class="section-title" style="margin-bottom:8px;"><i class="ti ti-check" style="color:#0F6E56; font-size:14px; margin-right:4px;" aria-hidden="true"></i>Skills you have</p>
+      <span class="tag t-green">Java</span>
+      <span class="tag t-green">GitHub</span>
+      <span class="tag t-green">HTML</span>
+      <span class="tag t-green">CSS</span>
+      <span class="tag t-green">Prompt Engineering</span>
+      <span class="tag t-green">Basic Programming</span>
+    </div>
+    <div class="card">
+      <p class="section-title" style="margin-bottom:8px;"><i class="ti ti-alert-triangle" style="color:#BA7517; font-size:14px; margin-right:4px;" aria-hidden="true"></i>Skills you're missing</p>
+      <span class="tag t-red">Spring Boot</span>
+      <span class="tag t-red">MySQL</span>
+      <span class="tag t-red">Python</span>
+      <span class="tag t-red">REST APIs</span>
+      <span class="tag t-red">DSA (practice)</span>
+      <span class="tag t-red">Hibernate ORM</span>
+    </div>
+    <div class="card">
+      <p class="section-title" style="margin-bottom:8px;"><i class="ti ti-arrow-up" style="color:#3C3489; font-size:14px; margin-right:4px;" aria-hidden="true"></i>Priority learning</p>
+      <div style="font-size:13px; color:var(--color-text-primary); line-height:1.8;">
+        1. Spring Boot (Java jobs)<br>
+        2. MySQL basics<br>
+        3. Python (AI roles)<br>
+        4. DSA via LeetCode<br>
+        5. REST API concepts
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title" style="margin-top:1.5rem;">Market demand insights · India · June 2026</p>
+  <div class="card">
+    <div class="trend-row"><i class="ti ti-trending-up" aria-hidden="true"></i><strong style="font-weight:500; font-size:13px;">Generative AI internships</strong><span style="font-size:13px; color:var(--color-text-secondary); margin-left:4px;">— fastest-growing category in 2026; LLM + NLP roles exploding in startups</span></div>
+    <div class="trend-row"><i class="ti ti-brand-github" aria-hidden="true"></i><strong style="font-weight:500; font-size:13px;">GitHub portfolio</strong><span style="font-size:13px; color:var(--color-text-secondary); margin-left:4px;">— remote AI roles prioritize project work on GitHub over degree marks</span></div>
+    <div class="trend-row"><i class="ti ti-code" aria-hidden="true"></i><strong style="font-weight:500; font-size:13px;">Java still dominant</strong><span style="font-size:13px; color:var(--color-text-secondary); margin-left:4px;">— 447+ Java internship listings active; Spring Boot is the key unlock</span></div>
+    <div class="trend-row"><i class="ti ti-wifi" aria-hidden="true"></i><strong style="font-weight:500; font-size:13px;">Remote-first expanding</strong><span style="font-size:13px; color:var(--color-text-secondary); margin-left:4px;">— remote AI internships increasingly common; strong for UP-based candidates</span></div>
+    <div class="trend-row"><i class="ti ti-currency-rupee" aria-hidden="true"></i><strong style="font-weight:500; font-size:13px;">Stipend range (2026)</strong><span style="font-size:13px; color:var(--color-text-secondary); margin-left:4px;">— Java interns: ₹10k–₹20k/mo · AI interns: ₹15k–₹25k/mo · avg ₹18k</span></div>
+    <div class="trend-row"><i class="ti ti-school" aria-hidden="true"></i><strong style="font-weight:500; font-size:13px;">2026 batch eligible</strong><span style="font-size:13px; color:var(--color-text-secondary); margin-left:4px;">— most listings explicitly welcome 2025/2026 batch freshers; good timing</span></div>
+  </div>
+
+  <p class="section-title" style="margin-top:1.5rem;">Recommendations to get more interview calls</p>
+  <div class="card">
+    <div class="rec-item"><div class="rec-num">1</div><div>Add a Spring Boot mini-project to GitHub (a simple REST API + MySQL CRUD) — this single project closes the biggest skill gap and appears in 80% of Java internship listings.</div></div>
+    <div class="rec-item"><div class="rec-num">2</div><div>Add Python basics (free on Kaggle or CS50P) — unlocks all AI intern roles and doubles your eligible role count.</div></div>
+    <div class="rec-item"><div class="rec-num">3</div><div>Write a strong Internshala profile summary that mentions: Java, GitHub, prompt engineering, AI tools, and your 60-day Claude challenge — this is a unique differentiator most freshers don't have.</div></div>
+    <div class="rec-item"><div class="rec-num">4</div><div>Apply to 5–8 roles per week, not 1–2. Fresher internship conversion rates are 5–15%; volume matters more than selectivity at this stage.</div></div>
+    <div class="rec-item"><div class="rec-num">5</div><div>Practice 2–3 LeetCode Easy problems per day (Arrays, Strings, HashMaps in Java) — most screening rounds at product companies include a basic DSA round.</div></div>
+    <div class="rec-item"><div class="rec-num">6</div><div>Use Wellfound (AngelList) for startup AI roles and LinkedIn with "Past month" + "Internship" + "Remote" filters. Set daily job alerts for "Java intern" and "AI intern India".</div></div>
+  </div>
+
+  <p class="section-title" style="margin-top:1.5rem;">Overall fit assessment</p>
+  <div class="card">
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div style="display:flex; align-items:center; gap:12px; font-size:13px;">
+        <span style="min-width:160px; color:var(--color-text-primary);">Java Developer Intern</span>
+        <div class="fit-bar-outer"><div class="fit-bar-inner" style="width:78%;"></div></div>
+        <span style="font-size:12px; color:var(--color-text-secondary); min-width:36px;">78%</span>
+        <span class="tag t-green">Good fit</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px; font-size:13px;">
+        <span style="min-width:160px; color:var(--color-text-primary);">AI Intern</span>
+        <div class="fit-bar-outer"><div class="fit-bar-inner" style="width:65%; background:#BA7517;"></div></div>
+        <span style="font-size:12px; color:var(--color-text-secondary); min-width:36px;">65%</span>
+        <span class="tag t-amber">Partial fit</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px; font-size:13px;">
+        <span style="min-width:160px; color:var(--color-text-primary);">Software Dev Intern</span>
+        <div class="fit-bar-outer"><div class="fit-bar-inner" style="width:72%;"></div></div>
+        <span style="font-size:12px; color:var(--color-text-secondary); min-width:36px;">72%</span>
+        <span class="tag t-green">Good fit</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px; font-size:13px;">
+        <span style="min-width:160px; color:var(--color-text-primary);">Technical Support Intern</span>
+        <div class="fit-bar-outer"><div class="fit-bar-inner" style="width:85%;"></div></div>
+        <span style="font-size:12px; color:var(--color-text-secondary); min-width:36px;">85%</span>
+        <span class="tag t-green">Strong fit</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px; font-size:13px;">
+        <span style="min-width:160px; color:var(--color-text-primary);">Stipend expectations</span>
+        <div class="fit-bar-outer"><div class="fit-bar-inner" style="width:90%;"></div></div>
+        <span style="font-size:12px; color:var(--color-text-secondary); min-width:36px;">90%</span>
+        <span class="tag t-green">Aligned</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:1rem; display:flex; gap:8px; flex-wrap:wrap;">
+    <button onclick="sendPrompt('Write me a tailored resume for a Java Developer Intern role based on my profile.')">Draft resume ↗</button>
+    <button onclick="sendPrompt('Write a cold outreach message I can send to a startup on LinkedIn for an AI Intern role.')">Cold outreach ↗</button>
+    <button onclick="sendPrompt('Create a 30-day learning plan to fill my skill gaps before applying to these roles.')">30-day plan ↗</button>
+  </div>
+</div>

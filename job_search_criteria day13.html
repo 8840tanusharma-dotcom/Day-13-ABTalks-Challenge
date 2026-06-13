@@ -1,0 +1,85 @@
+
+<style>
+  .wrap { padding: 1.5rem 0; font-family: var(--font-sans); }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 12px; }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; }
+  .card-label { font-size: 11px; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 10px; }
+  .row { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-text-primary); margin-bottom: 7px; }
+  .row:last-child { margin-bottom: 0; }
+  .row i { color: var(--color-text-secondary); font-size: 16px; flex-shrink: 0; }
+  .tag-wrap { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .tag { font-size: 12px; padding: 3px 10px; border-radius: 99px; border: 0.5px solid; }
+  .tag-blue { background: #E6F1FB; color: #0C447C; border-color: #85B7EB; }
+  .tag-purple { background: #EEEDFE; color: #3C3489; border-color: #AFA9EC; }
+  .tag-teal { background: #E1F5EE; color: #085041; border-color: #5DCAA5; }
+  .tag-amber { background: #FAEEDA; color: #633806; border-color: #EF9F27; }
+  .tag-gray { background: #F1EFE8; color: #444441; border-color: #B4B2A9; }
+  .full-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 12px; }
+  .pref-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 14px; color: var(--color-text-primary); }
+  .pref-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .pref-row i { color: var(--color-text-success); font-size: 16px; flex-shrink: 0; }
+  .summary-bar { display: flex; align-items: center; gap: 8px; background: #EEEDFE; border: 0.5px solid #AFA9EC; border-radius: var(--border-radius-md); padding: 8px 14px; margin-bottom: 1.25rem; }
+  .summary-bar i { color: #3C3489; font-size: 16px; }
+  .summary-bar span { font-size: 13px; color: #3C3489; }
+  .btn-row { margin-top: 1.25rem; display: flex; gap: 8px; flex-wrap: wrap; }
+</style>
+
+<div class="wrap">
+  <h2 class="sr-only">Job search criteria for a B.Tech fresher targeting software and AI internships</h2>
+
+  <div class="summary-bar">
+    <i class="ti ti-target" aria-hidden="true"></i>
+    <span>Targeting fresher-friendly internships · Remote or hybrid · Posted in last 30 days</span>
+  </div>
+
+  <div class="full-card" style="margin-bottom:12px;">
+    <p class="card-label">Target roles</p>
+    <div class="tag-wrap">
+      <span class="tag tag-blue">Software Developer Intern</span>
+      <span class="tag tag-blue">Java Developer Intern</span>
+      <span class="tag tag-purple">AI Intern</span>
+      <span class="tag tag-purple">Technical Support Intern</span>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <p class="card-label">Company types</p>
+      <div class="row"><i class="ti ti-rocket" aria-hidden="true"></i> Startups</div>
+      <div class="row"><i class="ti ti-box" aria-hidden="true"></i> Product companies</div>
+      <div class="row"><i class="ti ti-building" aria-hidden="true"></i> IT services companies</div>
+    </div>
+    <div class="card">
+      <p class="card-label">Location preference</p>
+      <div class="row"><i class="ti ti-wifi" aria-hidden="true"></i> Remote</div>
+      <div class="row"><i class="ti ti-building-skyscraper" aria-hidden="true"></i> Hybrid</div>
+      <div class="row" style="color: var(--color-text-secondary); font-size:13px;"><i class="ti ti-map-pin-off" aria-hidden="true"></i> Onsite not preferred</div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-top:12px;">
+    <div class="card">
+      <p class="card-label">Salary expectation</p>
+      <div class="row"><i class="ti ti-currency-rupee" aria-hidden="true"></i> As per company standards</div>
+      <div class="row" style="color: var(--color-text-secondary); font-size: 13px;"><i class="ti ti-info-circle" aria-hidden="true"></i> Flexible · Growth over pay</div>
+    </div>
+    <div class="card">
+      <p class="card-label">Posting recency</p>
+      <div class="row"><i class="ti ti-calendar" aria-hidden="true"></i> Within last 30 days</div>
+      <div class="row" style="color: var(--color-text-secondary); font-size: 13px;"><i class="ti ti-filter" aria-hidden="true"></i> No industry exclusions</div>
+    </div>
+  </div>
+
+  <div class="full-card" style="margin-top:12px;">
+    <p class="card-label">Additional preferences</p>
+    <div class="pref-row"><i class="ti ti-star" aria-hidden="true"></i> Fresher-friendly roles with no prior experience required</div>
+    <div class="pref-row"><i class="ti ti-school" aria-hidden="true"></i> Training and mentorship opportunities available</div>
+    <div class="pref-row"><i class="ti ti-trending-up" aria-hidden="true"></i> Clear career growth potential and learning path</div>
+  </div>
+
+  <div class="btn-row">
+    <button onclick="sendPrompt('Based on my job search criteria, what are the best platforms in India to find these internships?')">Find best platforms ↗</button>
+    <button onclick="sendPrompt('Write a cold email template I can use to apply for a Java Developer Intern role at a startup.')">Draft cold email ↗</button>
+    <button onclick="sendPrompt('What skills should I add to my resume to land an AI Intern role as a fresher?')">Skills gap check ↗</button>
+  </div>
+</div>
